@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QA Extractor</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #202124;
+        }
+        #extract-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        #extract-btn:hover {
+            background-color: #1557b0;
+        }
+        #extract-btn:disabled {
+            background-color: #e0e0e0;
+            color: #9e9e9e;
+            cursor: not-allowed;
+        }
+        #results {
+            margin-top: 16px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            min-height: 80px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 13px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .error {
+            color: #d93025;
+            background-color: #fce8e6 !important;
+            border-color: #fad2cf !important;
+        }
+        .loading {
+            color: #1a73e8;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h2>Meeting QA Extractor</h2>
+    <button id="extract-btn">Get Top Questions</button>
+    <div id="results">Click the button to extract questions from the chat. Make sure the chat panel is open on the page.</div>
+
+    <!-- Include the popup logic script -->
+    <script src="popup.js"></script>
+</body>
+</html>

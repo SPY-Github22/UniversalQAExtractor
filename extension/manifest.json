@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Meeting QA Extractor",
+  "version": "1.0",
+  "description": "Extracts top questions from meeting chats (e.g., Google Meet, Zoom) and sends them to a local server for analysis.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extract QA"
+  },
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "*://meet.google.com/*",
+    "*://*.zoom.us/*"
+  ]
+}

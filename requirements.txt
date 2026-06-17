@@ -1,0 +1,12 @@
+mss==9.0.1
+easyocr==1.7.1
+opencv-python
+numpy
+customtkinter==5.2.2
+Pillow
+torch
+transformers
+datasets
+
+Flask
+flask-cors
