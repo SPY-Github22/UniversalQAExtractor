@@ -10,3 +10,7 @@ datasets
 
 Flask
 flask-cors
+
+# PC Tray App (tray_app.py)
+pystray
+keyboard
