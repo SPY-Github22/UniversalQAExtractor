@@ -2,7 +2,8 @@ import os
 import json
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import T5Tokenizer, T5ForConditionalGeneration, AdamW
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+from torch.optim import AdamW
 
 # Set environment variables to force local cache
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
