@@ -1,4 +1,4 @@
-# BRIEFING — 2026-06-18T02:10:00Z
+# BRIEFING — 2026-06-18T02:12:30Z
 
 ## Mission
 Review the implementations of Screen Capture Service (Milestone 3) and OCR Service (Milestone 4).
@@ -18,7 +18,7 @@ Review the implementations of Screen Capture Service (Milestone 3) and OCR Servi
 
 ## Current Parent
 - Conversation ID: 6c6a1ddc-1173-4aca-a6d2-e1aaa781a6ff
-- Updated: not yet
+- Updated: 2026-06-18T02:12:30Z
 
 ## Review Scope
 - **Files to review**:
@@ -30,17 +30,33 @@ Review the implementations of Screen Capture Service (Milestone 3) and OCR Servi
 - **Review criteria**: Correctness, logical completeness, quality, risk assessment, adversarial stress-testing.
 
 ## Review Checklist
-- **Items reviewed**: none
-- **Verdict**: pending
-- **Unverified claims**: none
+- **Items reviewed**:
+  - `lib/services/screen_capture_service.dart`
+  - `lib/services/ocr_service.dart`
+  - `test/services/screen_capture_test.dart`
+  - `test/services/ocr_service_test.dart`
+  - `test/pipeline_integration_test.dart`
+  - `lib/services/pipeline_coordinator.dart`
+  - `test/services/api_service_test.dart`
+  - `test/services/api_service_stress_test.dart`
+- **Verdict**: REQUEST_CHANGES
+- **Unverified claims**: Native platform code execution, actual device frame rate profiling, and automated test suite run (timed out).
 
 ## Attack Surface
-- **Hypotheses tested**: none
-- **Vulnerabilities found**: none
-- **Untested angles**: none
+- **Hypotheses tested**:
+  - `MockOcrService` length check $\le 10$ returns `""`. Result: Confirmed that this breaks happy-path/integration tests that pass length 3 or 1 arrays.
+  - `PipelineCoordinator` duplicate filtering. Result: Confirmed that `sentLines` stores values permanently without expiration, leading to OOM risk and functional bugs.
+  - `MlKitOcrService` ROI cropping. Result: Confirmed that synchronous Dart-side PNG cropping is a major UI thread bottleneck.
+- **Vulnerabilities found**:
+  - UI blocking cropping process (Main thread blocking).
+  - Out of memory risk on permanent duplicate cache.
+  - StateError on event channel subscription closure during dispose.
+  - Race conditions in start/stop capture flow.
+- **Untested angles**:
+  - Actual native platform channel memory leak profiling.
 
 ## Key Decisions Made
-- Initializing briefing and starting investigation.
+- Concluded investigation, raised findings to Critical/Major, formulated review report and handoff report.
 
 ## Artifact Index
 - `d:\Projects\UniversalQAExtractor\mobile\.agents\reviewer_m3_m4_1\review.md` — Final review and challenge report.

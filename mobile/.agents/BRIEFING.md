@@ -20,7 +20,7 @@ Monitor the project orchestrator and verify project completion through independe
 
 ## Project Status
 - **Phase**: in progress
-- **Details**: E2E Testing Track is 100% completed. Implementation Track (Gen2 sub_orch: `6c6a1ddc-1173-4aca-a6d2-e1aaa781a6ff`) has completed Milestones 3 (Screen Capture Scaffolding) and 4 (OCR Processing Service) code implementation, and is currently running verification.
+- **Details**: E2E Testing Track is 100% completed. Implementation Track has transitioned to Gen3 sub-orchestrator (`3606899f-371a-4b64-b6bb-e4944e789281`). Milestone 3 (Screen Capture Scaffolding) code is implemented (including platform channel fixes) and in verification; Milestone 4 (OCR Processing Service) is planned for the next step.
 
 ## Victory Audit Status
 - **Triggered**: no

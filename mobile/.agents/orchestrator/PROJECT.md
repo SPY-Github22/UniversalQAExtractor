@@ -46,9 +46,9 @@ The mobile application is a cross-platform client built using Flutter (iOS and A
 |---|------|-------|--------------|--------|-----------------|
 | 1 | Test Suite & Infrastructure (E2E Track) | Design comprehensive test suite and infra | None | DONE | dcd168be-53dc-49ca-a633-a5afcfd30ce8 |
 | 2 | Project Initialization & Flutter Init | Initialize Flutter app structure and configuration | None | DONE | 3606899f-371a-4b64-b6bb-e4944e789281 |
-| 3 | Implement Core API Client | Write ApiService and unit tests | M2 | IN_PROGRESS | 3606899f-371a-4b64-b6bb-e4944e789281 |
+| 3 | Implement Core API Client | Write ApiService and unit tests | M2 | DONE | 3606899f-371a-4b64-b6bb-e4944e789281 |
 | 4 | Implement Screen Capture Scaffolding | Write screen capture service and native platforms scaffolding | M2 | IN_PROGRESS | 3606899f-371a-4b64-b6bb-e4944e789281 |
-| 5 | Implement OCR Processing Service | Write OcrService wrapper, mock integration, and unit tests | M2 | IN_PROGRESS | 3606899f-371a-4b64-b6bb-e4944e789281 |
+| 5 | Implement OCR Processing Service | Write OcrService wrapper, mock integration, and unit tests | M2 | PLANNED | 3606899f-371a-4b64-b6bb-e4944e789281 |
 | 6 | Integration & Final E2E Test Pass | Verification of full system against E2E test suite | M1, M3, M4, M5 | PLANNED | 3606899f-371a-4b64-b6bb-e4944e789281 |
 
 ## Interface Contracts

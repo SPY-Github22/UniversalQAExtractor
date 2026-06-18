@@ -32,7 +32,7 @@ Build a cross-platform mobile application (iOS/Android) client that captures scr
   5. Implement OCR Scaffolding [pending]
   6. E2E Verification & Audit [pending]
 - **Current phase**: 2
-- **Current focus**: Coordinate implementation verification and testing (Milestone 3 Screen Capture Scaffolding)
+- **Current focus**: Coordinate implementation verification and testing (Milestone 3 Screen Capture Scaffolding verification)
 
 ## 🔒 Key Constraints
 - Never write, modify, or create source code files directly.
